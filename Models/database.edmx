@@ -1,0 +1,1459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VassilikoFiltersModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="VassilikoFiltersModelStoreContainer">
+    <EntitySet Name="Bag_Replacement" EntityType="VassilikoFiltersModel.Store.Bag_Replacement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Bag_Suppliers" EntityType="VassilikoFiltersModel.Store.Bag_Suppliers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Bag_Types" EntityType="VassilikoFiltersModel.Store.Bag_Types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cages_Maintenance" EntityType="VassilikoFiltersModel.Store.Cages_Maintenance" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Compartments" EntityType="VassilikoFiltersModel.Store.Compartments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Departments" EntityType="VassilikoFiltersModel.Store.Departments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fiber_Brand" EntityType="VassilikoFiltersModel.Store.Fiber_Brand" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Filters" EntityType="VassilikoFiltersModel.Store.Filters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Manufacturers" EntityType="VassilikoFiltersModel.Store.Manufacturers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Material_Types" EntityType="VassilikoFiltersModel.Store.Material_Types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Moveable_Beams" EntityType="VassilikoFiltersModel.Store.Moveable_Beams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nozle_Spares" EntityType="VassilikoFiltersModel.Store.Nozle_Spares" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nozle_Types" EntityType="VassilikoFiltersModel.Store.Nozle_Types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Replacement_Reasons" EntityType="VassilikoFiltersModel.Store.Replacement_Reasons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Replacements" EntityType="VassilikoFiltersModel.Store.Replacements" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="VassilikoFiltersModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="VassilikoFiltersModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Valves_Maintenance" EntityType="VassilikoFiltersModel.Store.Valves_Maintenance" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vibrators" EntityType="VassilikoFiltersModel.Store.Vibrators" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Colors" EntityType="VassilikoFiltersModel.Store.Colors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nozle_Colors" EntityType="VassilikoFiltersModel.Store.Nozle_Colors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nozle_Suppliers" EntityType="VassilikoFiltersModel.Store.Nozle_Suppliers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Bag_Replacement_Bag_Types" Association="VassilikoFiltersModel.Store.FK_Bag_Replacement_Bag_Types">
+      <End Role="Bag_Types" EntitySet="Bag_Types" />
+      <End Role="Bag_Replacement" EntitySet="Bag_Replacement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bag_Replacement_Filters" Association="VassilikoFiltersModel.Store.FK_Bag_Replacement_Filters">
+      <End Role="Filters" EntitySet="Filters" />
+      <End Role="Bag_Replacement" EntitySet="Bag_Replacement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bag_Replacement_Replacement_Reasons" Association="VassilikoFiltersModel.Store.FK_Bag_Replacement_Replacement_Reasons">
+      <End Role="Replacement_Reasons" EntitySet="Replacement_Reasons" />
+      <End Role="Bag_Replacement" EntitySet="Bag_Replacement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bag_Types_Bag_Types" Association="VassilikoFiltersModel.Store.FK_Bag_Types_Bag_Types">
+      <End Role="Bag_Suppliers" EntitySet="Bag_Suppliers" />
+      <End Role="Bag_Types" EntitySet="Bag_Types" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bag_Types_Fiber_Brand" Association="VassilikoFiltersModel.Store.FK_Bag_Types_Fiber_Brand">
+      <End Role="Fiber_Brand" EntitySet="Fiber_Brand" />
+      <End Role="Bag_Types" EntitySet="Bag_Types" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bag_Types_Material_Types" Association="VassilikoFiltersModel.Store.FK_Bag_Types_Material_Types">
+      <End Role="Material_Types" EntitySet="Material_Types" />
+      <End Role="Bag_Types" EntitySet="Bag_Types" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filters_Cage_maintenace" Association="VassilikoFiltersModel.Store.FK_Filters_Cage_maintenace">
+      <End Role="Filters" EntitySet="Filters" />
+      <End Role="Cages_Maintenance" EntitySet="Cages_Maintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moveable_Beams_Compartments" Association="VassilikoFiltersModel.Store.FK_Moveable_Beams_Compartments">
+      <End Role="Compartments" EntitySet="Compartments" />
+      <End Role="Moveable_Beams" EntitySet="Moveable_Beams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Replacements_Compartments" Association="VassilikoFiltersModel.Store.FK_Replacements_Compartments">
+      <End Role="Compartments" EntitySet="Compartments" />
+      <End Role="Replacements" EntitySet="Replacements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filters_Departments" Association="VassilikoFiltersModel.Store.FK_Filters_Departments">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Filters" EntitySet="Filters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filters_Manufacturers" Association="VassilikoFiltersModel.Store.FK_Filters_Manufacturers">
+      <End Role="Manufacturers" EntitySet="Manufacturers" />
+      <End Role="Filters" EntitySet="Filters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Valves_Maintenance_Filters" Association="VassilikoFiltersModel.Store.FK_Valves_Maintenance_Filters">
+      <End Role="Filters" EntitySet="Filters" />
+      <End Role="Valves_Maintenance" EntitySet="Valves_Maintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vibrators_Filters" Association="VassilikoFiltersModel.Store.FK_Vibrators_Filters">
+      <End Role="Filters" EntitySet="Filters" />
+      <End Role="Vibrators" EntitySet="Vibrators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nozle_Spares_Nozle_Types" Association="VassilikoFiltersModel.Store.FK_Nozle_Spares_Nozle_Types">
+      <End Role="Nozle_Types" EntitySet="Nozle_Types" />
+      <End Role="Nozle_Spares" EntitySet="Nozle_Spares" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Replacements_Nozle_Spares" Association="VassilikoFiltersModel.Store.FK_Replacements_Nozle_Spares">
+      <End Role="Nozle_Spares" EntitySet="Nozle_Spares" />
+      <End Role="Replacements" EntitySet="Replacements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Replacements_Nozle_Types" Association="VassilikoFiltersModel.Store.FK_Replacements_Nozle_Types">
+      <End Role="Nozle_Types" EntitySet="Nozle_Types" />
+      <End Role="Replacements" EntitySet="Replacements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reasons_Cage_maintenace" Association="VassilikoFiltersModel.Store.FK_Reasons_Cage_maintenace">
+      <End Role="Replacement_Reasons" EntitySet="Replacement_Reasons" />
+      <End Role="Cages_Maintenance" EntitySet="Cages_Maintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bag_Suppliers_Colors" Association="VassilikoFiltersModel.Store.FK_Bag_Suppliers_Colors">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="Bag_Suppliers" EntitySet="Bag_Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nozle_Spares_Nozle_Suppliers" Association="VassilikoFiltersModel.Store.FK_Nozle_Spares_Nozle_Suppliers">
+      <End Role="Nozle_Suppliers" EntitySet="Nozle_Suppliers" />
+      <End Role="Nozle_Spares" EntitySet="Nozle_Spares" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Replacements_Reasons" Association="VassilikoFiltersModel.Store.FK_Replacements_Reasons">
+      <End Role="Replacement_Reasons" EntitySet="Replacement_Reasons" />
+      <End Role="Replacement" EntitySet="Replacements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nozle_Suppliers_Nozle_Colors" Association="VassilikoFiltersModel.Store.FK_Nozle_Suppliers_Nozle_Colors">
+      <End Role="Nozle_Colors" EntitySet="Nozle_Colors" />
+      <End Role="Nozle_Suppliers" EntitySet="Nozle_Suppliers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bag_Replacement">
+    <Key>
+      <PropertyRef Name="Replacement_Code" />
+    </Key>
+    <Property Name="Replacement_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Repl_Date" Type="datetime" Nullable="false" />
+    <Property Name="Filter_Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sector_No" Type="int" Nullable="false" />
+    <Property Name="Valve_No" Type="int" Nullable="false" />
+    <Property Name="Bag_No" Type="int" Nullable="false" />
+    <Property Name="Bag_Code" Type="int" Nullable="false" />
+    <Property Name="Replacement_Reason_Code" Type="int" Nullable="false" />
+    <Property Name="Create_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bag_Suppliers">
+    <Key>
+      <PropertyRef Name="Supplier_Code" />
+    </Key>
+    <Property Name="Supplier_Code" Type="int" Nullable="false" />
+    <Property Name="Supplier_Name" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Contact_Person" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Email_Address" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Telephone_Number" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Color" Type="nchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Bag_Types">
+    <Key>
+      <PropertyRef Name="Bag_Code" />
+    </Key>
+    <Property Name="Bag_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bag_Dimensions" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Bag_Description" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Material_Code" Type="int" Nullable="false" />
+    <Property Name="Supplier_Code" Type="int" Nullable="false" />
+    <Property Name="Bag_Cost" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="Fiber_Code" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cages_Maintenance">
+    <Key>
+      <PropertyRef Name="Cage_Code" />
+    </Key>
+    <Property Name="Cage_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Filter_Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Replacement_Reason_Code" Type="int" Nullable="false" />
+    <Property Name="Sector_No" Type="int" Nullable="false" />
+    <Property Name="Valve_No" Type="int" Nullable="false" />
+    <Property Name="Bag_No" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compartments">
+    <Key>
+      <PropertyRef Name="Compartment_ID" />
+    </Key>
+    <Property Name="Compartment_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No_Of_Beams" Type="int" Nullable="false" />
+    <Property Name="No_Of_Nozles" Type="int" Nullable="false" />
+    <Property Name="fans_No" Type="nchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="Department_Code" />
+    </Key>
+    <Property Name="Department_Code" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Department_Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="No_Of_Filters" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fiber_Brand">
+    <Key>
+      <PropertyRef Name="Fiber_Code" />
+    </Key>
+    <Property Name="Fiber_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fiber_Supplier" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Filters">
+    <Key>
+      <PropertyRef Name="Filter_Code" />
+    </Key>
+    <Property Name="Filter_Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Filter_Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Department_Code" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Manufacturer_Code" Type="int" Nullable="false" />
+    <Property Name="No_Of_Sectors" Type="int" Nullable="false" />
+    <Property Name="Sector_No_Valves" Type="int" Nullable="false" />
+    <Property Name="Bags_Per_Valve" Type="int" Nullable="false" />
+    <Property Name="No_Of_Vibrators" Type="int" Nullable="false" />
+    <Property Name="X" Type="int" Nullable="false" />
+    <Property Name="Y" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturers">
+    <Key>
+      <PropertyRef Name="Manufacturer_Code" />
+    </Key>
+    <Property Name="Manufacturer_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Manufacturer_Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Material_Types">
+    <Key>
+      <PropertyRef Name="Material_Code" />
+    </Key>
+    <Property Name="Material_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Material_Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Moveable_Beams">
+    <Key>
+      <PropertyRef Name="Compartment_ID" />
+      <PropertyRef Name="Beam_no" />
+    </Key>
+    <Property Name="Compartment_ID" Type="int" Nullable="false" />
+    <Property Name="Beam_no" Type="int" Nullable="false" />
+    <Property Name="Moveable" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nozle_Spares">
+    <Key>
+      <PropertyRef Name="Spare_ID" />
+    </Key>
+    <Property Name="Spare_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nozle_ID" Type="int" Nullable="false" />
+    <Property Name="Spare_Store_Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Supplier" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="Cost" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="Supplier_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nozle_Types">
+    <Key>
+      <PropertyRef Name="Nozle_ID" />
+    </Key>
+    <Property Name="Nozle_ID" Type="int" Nullable="false" />
+    <Property Name="Nozle_Type" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Nozle_Description" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Nozle_no_of_Spare_Parts" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Replacement_Reasons">
+    <Key>
+      <PropertyRef Name="Replacement_Reason_Code" />
+    </Key>
+    <Property Name="Replacement_Reason_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Replacement_Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Replacements">
+    <Key>
+      <PropertyRef Name="Replacement_ID" />
+    </Key>
+    <Property Name="Replacement_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Beam_no" Type="int" Nullable="false" />
+    <Property Name="Nozle_no" Type="int" Nullable="false" />
+    <Property Name="Spare_ID" Type="int" Nullable="false" />
+    <Property Name="Compartment_ID" Type="int" Nullable="false" />
+    <Property Name="Nozle_ID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Replacement_Reason_Code" Type="int" Nullable="false" />
+    <Property Name="Create_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Role" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Valves_Maintenance">
+    <Key>
+      <PropertyRef Name="Maintenance_Code" />
+    </Key>
+    <Property Name="Maintenance_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maint_Date" Type="datetime" Nullable="false" />
+    <Property Name="Filter_Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sector_No" Type="int" Nullable="false" />
+    <Property Name="Valve_No" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vibrators">
+    <Key>
+      <PropertyRef Name="Vibrator_Code" />
+    </Key>
+    <Property Name="Vibrator_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vibrator_Type" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Filter_Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="Color" />
+    </Key>
+    <Property Name="Color" Type="nchar" Nullable="false" MaxLength="15" />
+    <Property Name="Available" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nozle_Colors">
+    <Key>
+      <PropertyRef Name="Color" />
+    </Key>
+    <Property Name="Color" Type="nchar" Nullable="false" MaxLength="15" />
+    <Property Name="Available" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nozle_Suppliers">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="Color" Type="nchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <Association Name="FK_Bag_Replacement_Bag_Types">
+    <End Role="Bag_Types" Type="VassilikoFiltersModel.Store.Bag_Types" Multiplicity="1" />
+    <End Role="Bag_Replacement" Type="VassilikoFiltersModel.Store.Bag_Replacement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bag_Types">
+        <PropertyRef Name="Bag_Code" />
+      </Principal>
+      <Dependent Role="Bag_Replacement">
+        <PropertyRef Name="Bag_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bag_Replacement_Filters">
+    <End Role="Filters" Type="VassilikoFiltersModel.Store.Filters" Multiplicity="1" />
+    <End Role="Bag_Replacement" Type="VassilikoFiltersModel.Store.Bag_Replacement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filters">
+        <PropertyRef Name="Filter_Code" />
+      </Principal>
+      <Dependent Role="Bag_Replacement">
+        <PropertyRef Name="Filter_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bag_Replacement_Replacement_Reasons">
+    <End Role="Replacement_Reasons" Type="VassilikoFiltersModel.Store.Replacement_Reasons" Multiplicity="1" />
+    <End Role="Bag_Replacement" Type="VassilikoFiltersModel.Store.Bag_Replacement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Replacement_Reasons">
+        <PropertyRef Name="Replacement_Reason_Code" />
+      </Principal>
+      <Dependent Role="Bag_Replacement">
+        <PropertyRef Name="Replacement_Reason_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bag_Types_Bag_Types">
+    <End Role="Bag_Suppliers" Type="VassilikoFiltersModel.Store.Bag_Suppliers" Multiplicity="1" />
+    <End Role="Bag_Types" Type="VassilikoFiltersModel.Store.Bag_Types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bag_Suppliers">
+        <PropertyRef Name="Supplier_Code" />
+      </Principal>
+      <Dependent Role="Bag_Types">
+        <PropertyRef Name="Supplier_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bag_Types_Fiber_Brand">
+    <End Role="Fiber_Brand" Type="VassilikoFiltersModel.Store.Fiber_Brand" Multiplicity="1" />
+    <End Role="Bag_Types" Type="VassilikoFiltersModel.Store.Bag_Types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fiber_Brand">
+        <PropertyRef Name="Fiber_Code" />
+      </Principal>
+      <Dependent Role="Bag_Types">
+        <PropertyRef Name="Fiber_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bag_Types_Material_Types">
+    <End Role="Material_Types" Type="VassilikoFiltersModel.Store.Material_Types" Multiplicity="1" />
+    <End Role="Bag_Types" Type="VassilikoFiltersModel.Store.Bag_Types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_Types">
+        <PropertyRef Name="Material_Code" />
+      </Principal>
+      <Dependent Role="Bag_Types">
+        <PropertyRef Name="Material_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filters_Cage_maintenace">
+    <End Role="Filters" Type="VassilikoFiltersModel.Store.Filters" Multiplicity="1" />
+    <End Role="Cages_Maintenance" Type="VassilikoFiltersModel.Store.Cages_Maintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filters">
+        <PropertyRef Name="Filter_Code" />
+      </Principal>
+      <Dependent Role="Cages_Maintenance">
+        <PropertyRef Name="Filter_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moveable_Beams_Compartments">
+    <End Role="Compartments" Type="VassilikoFiltersModel.Store.Compartments" Multiplicity="1" />
+    <End Role="Moveable_Beams" Type="VassilikoFiltersModel.Store.Moveable_Beams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compartments">
+        <PropertyRef Name="Compartment_ID" />
+      </Principal>
+      <Dependent Role="Moveable_Beams">
+        <PropertyRef Name="Compartment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Replacements_Compartments">
+    <End Role="Compartments" Type="VassilikoFiltersModel.Store.Compartments" Multiplicity="1" />
+    <End Role="Replacements" Type="VassilikoFiltersModel.Store.Replacements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compartments">
+        <PropertyRef Name="Compartment_ID" />
+      </Principal>
+      <Dependent Role="Replacements">
+        <PropertyRef Name="Compartment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filters_Departments">
+    <End Role="Departments" Type="VassilikoFiltersModel.Store.Departments" Multiplicity="1" />
+    <End Role="Filters" Type="VassilikoFiltersModel.Store.Filters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="Department_Code" />
+      </Principal>
+      <Dependent Role="Filters">
+        <PropertyRef Name="Department_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filters_Manufacturers">
+    <End Role="Manufacturers" Type="VassilikoFiltersModel.Store.Manufacturers" Multiplicity="1" />
+    <End Role="Filters" Type="VassilikoFiltersModel.Store.Filters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturers">
+        <PropertyRef Name="Manufacturer_Code" />
+      </Principal>
+      <Dependent Role="Filters">
+        <PropertyRef Name="Manufacturer_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Valves_Maintenance_Filters">
+    <End Role="Filters" Type="VassilikoFiltersModel.Store.Filters" Multiplicity="1" />
+    <End Role="Valves_Maintenance" Type="VassilikoFiltersModel.Store.Valves_Maintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filters">
+        <PropertyRef Name="Filter_Code" />
+      </Principal>
+      <Dependent Role="Valves_Maintenance">
+        <PropertyRef Name="Filter_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vibrators_Filters">
+    <End Role="Filters" Type="VassilikoFiltersModel.Store.Filters" Multiplicity="1" />
+    <End Role="Vibrators" Type="VassilikoFiltersModel.Store.Vibrators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filters">
+        <PropertyRef Name="Filter_Code" />
+      </Principal>
+      <Dependent Role="Vibrators">
+        <PropertyRef Name="Filter_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nozle_Spares_Nozle_Types">
+    <End Role="Nozle_Types" Type="VassilikoFiltersModel.Store.Nozle_Types" Multiplicity="1" />
+    <End Role="Nozle_Spares" Type="VassilikoFiltersModel.Store.Nozle_Spares" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nozle_Types">
+        <PropertyRef Name="Nozle_ID" />
+      </Principal>
+      <Dependent Role="Nozle_Spares">
+        <PropertyRef Name="Nozle_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Replacements_Nozle_Spares">
+    <End Role="Nozle_Spares" Type="VassilikoFiltersModel.Store.Nozle_Spares" Multiplicity="1" />
+    <End Role="Replacements" Type="VassilikoFiltersModel.Store.Replacements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nozle_Spares">
+        <PropertyRef Name="Spare_ID" />
+      </Principal>
+      <Dependent Role="Replacements">
+        <PropertyRef Name="Spare_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Replacements_Nozle_Types">
+    <End Role="Nozle_Types" Type="VassilikoFiltersModel.Store.Nozle_Types" Multiplicity="1" />
+    <End Role="Replacements" Type="VassilikoFiltersModel.Store.Replacements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nozle_Types">
+        <PropertyRef Name="Nozle_ID" />
+      </Principal>
+      <Dependent Role="Replacements">
+        <PropertyRef Name="Nozle_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reasons_Cage_maintenace">
+    <End Role="Replacement_Reasons" Type="VassilikoFiltersModel.Store.Replacement_Reasons" Multiplicity="1" />
+    <End Role="Cages_Maintenance" Type="VassilikoFiltersModel.Store.Cages_Maintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Replacement_Reasons">
+        <PropertyRef Name="Replacement_Reason_Code" />
+      </Principal>
+      <Dependent Role="Cages_Maintenance">
+        <PropertyRef Name="Replacement_Reason_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bag_Suppliers_Colors">
+    <End Role="Color" Type="VassilikoFiltersModel.Store.Colors" Multiplicity="1" />
+    <End Role="Bag_Suppliers" Type="VassilikoFiltersModel.Store.Bag_Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="Color" />
+      </Principal>
+      <Dependent Role="Bag_Suppliers">
+        <PropertyRef Name="Color" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nozle_Spares_Nozle_Suppliers">
+    <End Role="Nozle_Suppliers" Type="VassilikoFiltersModel.Store.Nozle_Suppliers" Multiplicity="1" />
+    <End Role="Nozle_Spares" Type="VassilikoFiltersModel.Store.Nozle_Spares" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nozle_Suppliers">
+        <PropertyRef Name="Supplier_ID" />
+      </Principal>
+      <Dependent Role="Nozle_Spares">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Replacements_Reasons">
+    <End Role="Replacement_Reasons" Type="VassilikoFiltersModel.Store.Replacement_Reasons" Multiplicity="1" />
+    <End Role="Replacement" Type="VassilikoFiltersModel.Store.Replacements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Replacement_Reasons">
+        <PropertyRef Name="Replacement_Reason_Code" />
+      </Principal>
+      <Dependent Role="Replacement">
+        <PropertyRef Name="Replacement_Reason_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nozle_Suppliers_Nozle_Colors">
+    <End Role="Nozle_Colors" Type="VassilikoFiltersModel.Store.Nozle_Colors" Multiplicity="1" />
+    <End Role="Nozle_Suppliers" Type="VassilikoFiltersModel.Store.Nozle_Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nozle_Colors">
+        <PropertyRef Name="Color" />
+      </Principal>
+      <Dependent Role="Nozle_Suppliers">
+        <PropertyRef Name="Color" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VassilikoFiltersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bag_Replacement">
+          <Key>
+            <PropertyRef Name="Replacement_Code" />
+          </Key>
+          <Property Name="Replacement_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Repl_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Filter_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sector_No" Type="Int32" Nullable="false" />
+          <Property Name="Valve_No" Type="Int32" Nullable="false" />
+          <Property Name="Bag_No" Type="Int32" Nullable="false" />
+          <Property Name="Bag_Code" Type="Int32" Nullable="false" />
+          <Property Name="Replacement_Reason_Code" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bag_Types" Relationship="Self.FK_Bag_Replacement_Bag_Types" FromRole="Bag_Replacement" ToRole="Bag_Types" />
+          <NavigationProperty Name="Filter" Relationship="Self.FK_Bag_Replacement_Filters" FromRole="Bag_Replacement" ToRole="Filters" />
+          <NavigationProperty Name="Replacement_Reasons" Relationship="Self.FK_Bag_Replacement_Replacement_Reasons" FromRole="Bag_Replacement" ToRole="Replacement_Reasons" />
+          <Property Name="Create_Date" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="Bag_Suppliers">
+          <Key>
+            <PropertyRef Name="Supplier_Code" />
+          </Key>
+          <Property Name="Supplier_Code" Type="Int32" Nullable="false" />
+          <Property Name="Supplier_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact_Person" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email_Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telephone_Number" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bag_Types" Relationship="Self.FK_Bag_Types_Bag_Types" FromRole="Bag_Suppliers" ToRole="Bag_Types" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Color1" Relationship="VassilikoFiltersModel.FK_Bag_Suppliers_Colors" FromRole="Bag_Suppliers" ToRole="Color" />
+        </EntityType>
+        <EntityType Name="Bag_Types">
+          <Key>
+            <PropertyRef Name="Bag_Code" />
+          </Key>
+          <Property Name="Bag_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bag_Dimensions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Bag_Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Material_Code" Type="Int32" Nullable="false" />
+          <Property Name="Supplier_Code" Type="Int32" Nullable="false" />
+          <Property Name="Bag_Cost" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="Fiber_Code" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bag_Replacement" Relationship="Self.FK_Bag_Replacement_Bag_Types" FromRole="Bag_Types" ToRole="Bag_Replacement" />
+          <NavigationProperty Name="Bag_Suppliers" Relationship="Self.FK_Bag_Types_Bag_Types" FromRole="Bag_Types" ToRole="Bag_Suppliers" />
+          <NavigationProperty Name="Fiber_Brand" Relationship="Self.FK_Bag_Types_Fiber_Brand" FromRole="Bag_Types" ToRole="Fiber_Brand" />
+          <NavigationProperty Name="Material_Types" Relationship="Self.FK_Bag_Types_Material_Types" FromRole="Bag_Types" ToRole="Material_Types" />
+        </EntityType>
+        <EntityType Name="Cages_Maintenance">
+          <Key>
+            <PropertyRef Name="Cage_Code" />
+          </Key>
+          <Property Name="Cage_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Filter_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Replacement_Reason_Code" Type="Int32" Nullable="false" />
+          <Property Name="Sector_No" Type="Int32" Nullable="false" />
+          <Property Name="Valve_No" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Filter" Relationship="Self.FK_Filters_Cage_maintenace" FromRole="Cages_Maintenance" ToRole="Filters" />
+          <Property Name="Bag_No" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Replacement_Reasons" Relationship="VassilikoFiltersModel.FK_Reasons_Cage_maintenace" FromRole="Cages_Maintenance" ToRole="Replacement_Reasons" />
+        </EntityType>
+        <EntityType Name="Compartment">
+          <Key>
+            <PropertyRef Name="Compartment_ID" />
+          </Key>
+          <Property Name="Compartment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="No_Of_Beams" Type="Int32" Nullable="false" />
+          <Property Name="No_Of_Nozles" Type="Int32" Nullable="false" />
+          <Property Name="fans_No" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Moveable_Beams" Relationship="Self.FK_Moveable_Beams_Compartments" FromRole="Compartments" ToRole="Moveable_Beams" />
+          <NavigationProperty Name="Replacements" Relationship="Self.FK_Replacements_Compartments" FromRole="Compartments" ToRole="Replacements" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Department_Code" />
+          </Key>
+          <Property Name="Department_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Department_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="No_Of_Filters" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Filters" Relationship="Self.FK_Filters_Departments" FromRole="Departments" ToRole="Filters" />
+        </EntityType>
+        <EntityType Name="Fiber_Brand">
+          <Key>
+            <PropertyRef Name="Fiber_Code" />
+          </Key>
+          <Property Name="Fiber_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fiber_Supplier" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bag_Types" Relationship="Self.FK_Bag_Types_Fiber_Brand" FromRole="Fiber_Brand" ToRole="Bag_Types" />
+        </EntityType>
+        <EntityType Name="Filter">
+          <Key>
+            <PropertyRef Name="Filter_Code" />
+          </Key>
+          <Property Name="Filter_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Filter_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Department_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Manufacturer_Code" Type="Int32" Nullable="false" />
+          <Property Name="No_Of_Sectors" Type="Int32" Nullable="false" />
+          <Property Name="Sector_No_Valves" Type="Int32" Nullable="false" />
+          <Property Name="Bags_Per_Valve" Type="Int32" Nullable="false" />
+          <Property Name="No_Of_Vibrators" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bag_Replacement" Relationship="Self.FK_Bag_Replacement_Filters" FromRole="Filters" ToRole="Bag_Replacement" />
+          <NavigationProperty Name="Cages_Maintenance" Relationship="Self.FK_Filters_Cage_maintenace" FromRole="Filters" ToRole="Cages_Maintenance" />
+          <NavigationProperty Name="Department" Relationship="Self.FK_Filters_Departments" FromRole="Filters" ToRole="Departments" />
+          <NavigationProperty Name="Manufacturer" Relationship="Self.FK_Filters_Manufacturers" FromRole="Filters" ToRole="Manufacturers" />
+          <NavigationProperty Name="Valves_Maintenance" Relationship="Self.FK_Valves_Maintenance_Filters" FromRole="Filters" ToRole="Valves_Maintenance" />
+          <NavigationProperty Name="Vibrators" Relationship="Self.FK_Vibrators_Filters" FromRole="Filters" ToRole="Vibrators" />
+          <Property Name="X" Type="Int32" Nullable="false" />
+          <Property Name="Y" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="Manufacturer_Code" />
+          </Key>
+          <Property Name="Manufacturer_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Manufacturer_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Filters" Relationship="Self.FK_Filters_Manufacturers" FromRole="Manufacturers" ToRole="Filters" />
+        </EntityType>
+        <EntityType Name="Material_Types">
+          <Key>
+            <PropertyRef Name="Material_Code" />
+          </Key>
+          <Property Name="Material_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Material_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bag_Types" Relationship="Self.FK_Bag_Types_Material_Types" FromRole="Material_Types" ToRole="Bag_Types" />
+        </EntityType>
+        <EntityType Name="Moveable_Beams">
+          <Key>
+            <PropertyRef Name="Compartment_ID" />
+            <PropertyRef Name="Beam_no" />
+          </Key>
+          <Property Name="Compartment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Beam_no" Type="Int32" Nullable="false" />
+          <Property Name="Moveable" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Compartment" Relationship="Self.FK_Moveable_Beams_Compartments" FromRole="Moveable_Beams" ToRole="Compartments" />
+        </EntityType>
+        <EntityType Name="Nozle_Spares">
+          <Key>
+            <PropertyRef Name="Spare_ID" />
+          </Key>
+          <Property Name="Spare_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nozle_ID" Type="Int32" Nullable="false" />
+          <Property Name="Spare_Store_Id" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Supplier" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <NavigationProperty Name="Nozle_Types" Relationship="Self.FK_Nozle_Spares_Nozle_Types" FromRole="Nozle_Spares" ToRole="Nozle_Types" />
+          <NavigationProperty Name="Replacements" Relationship="Self.FK_Replacements_Nozle_Spares" FromRole="Nozle_Spares" ToRole="Replacements" />
+          <Property Name="Supplier_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nozle_Suppliers" Relationship="VassilikoFiltersModel.FK_Nozle_Spares_Nozle_Suppliers" FromRole="Nozle_Spares" ToRole="Nozle_Suppliers" />
+        </EntityType>
+        <EntityType Name="Nozle_Types">
+          <Key>
+            <PropertyRef Name="Nozle_ID" />
+          </Key>
+          <Property Name="Nozle_ID" Type="Int32" Nullable="false" />
+          <Property Name="Nozle_Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nozle_Description" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nozle_no_of_Spare_Parts" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nozle_Spares" Relationship="Self.FK_Nozle_Spares_Nozle_Types" FromRole="Nozle_Types" ToRole="Nozle_Spares" />
+          <NavigationProperty Name="Replacements" Relationship="Self.FK_Replacements_Nozle_Types" FromRole="Nozle_Types" ToRole="Replacements" />
+        </EntityType>
+        <EntityType Name="Replacement_Reasons">
+          <Key>
+            <PropertyRef Name="Replacement_Reason_Code" />
+          </Key>
+          <Property Name="Replacement_Reason_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Replacement_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bag_Replacement" Relationship="Self.FK_Bag_Replacement_Replacement_Reasons" FromRole="Replacement_Reasons" ToRole="Bag_Replacement" />
+          <NavigationProperty Name="Cages_Maintenance" Relationship="VassilikoFiltersModel.FK_Reasons_Cage_maintenace" FromRole="Replacement_Reasons" ToRole="Cages_Maintenance" />
+          <NavigationProperty Name="Replacements" Relationship="VassilikoFiltersModel.FK_Replacements_Reasons" FromRole="Replacement_Reasons" ToRole="Replacement" />
+        </EntityType>
+        <EntityType Name="Replacement">
+          <Key>
+            <PropertyRef Name="Replacement_ID" />
+          </Key>
+          <Property Name="Replacement_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Beam_no" Type="Int32" Nullable="false" />
+          <Property Name="Nozle_no" Type="Int32" Nullable="false" />
+          <Property Name="Spare_ID" Type="Int32" Nullable="false" />
+          <Property Name="Compartment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Nozle_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Compartment" Relationship="Self.FK_Replacements_Compartments" FromRole="Replacements" ToRole="Compartments" />
+          <NavigationProperty Name="Nozle_Spares" Relationship="Self.FK_Replacements_Nozle_Spares" FromRole="Replacements" ToRole="Nozle_Spares" />
+          <NavigationProperty Name="Nozle_Types" Relationship="Self.FK_Replacements_Nozle_Types" FromRole="Replacements" ToRole="Nozle_Types" />
+          <Property Name="Replacement_Reason_Code" Type="Int32" Nullable="false" />
+          <Property Name="Create_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Replacement_Reasons" Relationship="VassilikoFiltersModel.FK_Replacements_Reasons" FromRole="Replacement" ToRole="Replacement_Reasons" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Valves_Maintenance">
+          <Key>
+            <PropertyRef Name="Maintenance_Code" />
+          </Key>
+          <Property Name="Maintenance_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Maint_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Filter_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sector_No" Type="Int32" Nullable="false" />
+          <Property Name="Valve_No" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Filter" Relationship="Self.FK_Valves_Maintenance_Filters" FromRole="Valves_Maintenance" ToRole="Filters" />
+        </EntityType>
+        <EntityType Name="Vibrator">
+          <Key>
+            <PropertyRef Name="Vibrator_Code" />
+          </Key>
+          <Property Name="Vibrator_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vibrator_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Filter_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Filter" Relationship="Self.FK_Vibrators_Filters" FromRole="Vibrators" ToRole="Filters" />
+        </EntityType>
+        <Association Name="FK_Bag_Replacement_Bag_Types">
+          <End Role="Bag_Types" Type="Self.Bag_Types" Multiplicity="1" />
+          <End Role="Bag_Replacement" Type="Self.Bag_Replacement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bag_Types">
+              <PropertyRef Name="Bag_Code" />
+            </Principal>
+            <Dependent Role="Bag_Replacement">
+              <PropertyRef Name="Bag_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bag_Replacement_Filters">
+          <End Role="Filters" Type="Self.Filter" Multiplicity="1" />
+          <End Role="Bag_Replacement" Type="Self.Bag_Replacement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Filters">
+              <PropertyRef Name="Filter_Code" />
+            </Principal>
+            <Dependent Role="Bag_Replacement">
+              <PropertyRef Name="Filter_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bag_Replacement_Replacement_Reasons">
+          <End Role="Replacement_Reasons" Type="Self.Replacement_Reasons" Multiplicity="1" />
+          <End Role="Bag_Replacement" Type="Self.Bag_Replacement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Replacement_Reasons">
+              <PropertyRef Name="Replacement_Reason_Code" />
+            </Principal>
+            <Dependent Role="Bag_Replacement">
+              <PropertyRef Name="Replacement_Reason_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bag_Types_Bag_Types">
+          <End Role="Bag_Suppliers" Type="Self.Bag_Suppliers" Multiplicity="1" />
+          <End Role="Bag_Types" Type="Self.Bag_Types" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bag_Suppliers">
+              <PropertyRef Name="Supplier_Code" />
+            </Principal>
+            <Dependent Role="Bag_Types">
+              <PropertyRef Name="Supplier_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bag_Types_Fiber_Brand">
+          <End Role="Fiber_Brand" Type="Self.Fiber_Brand" Multiplicity="1" />
+          <End Role="Bag_Types" Type="Self.Bag_Types" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fiber_Brand">
+              <PropertyRef Name="Fiber_Code" />
+            </Principal>
+            <Dependent Role="Bag_Types">
+              <PropertyRef Name="Fiber_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bag_Types_Material_Types">
+          <End Role="Material_Types" Type="Self.Material_Types" Multiplicity="1" />
+          <End Role="Bag_Types" Type="Self.Bag_Types" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Material_Types">
+              <PropertyRef Name="Material_Code" />
+            </Principal>
+            <Dependent Role="Bag_Types">
+              <PropertyRef Name="Material_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Filters_Cage_maintenace">
+          <End Role="Filters" Type="Self.Filter" Multiplicity="1" />
+          <End Role="Cages_Maintenance" Type="Self.Cages_Maintenance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Filters">
+              <PropertyRef Name="Filter_Code" />
+            </Principal>
+            <Dependent Role="Cages_Maintenance">
+              <PropertyRef Name="Filter_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Moveable_Beams_Compartments">
+          <End Role="Compartments" Type="Self.Compartment" Multiplicity="1" />
+          <End Role="Moveable_Beams" Type="Self.Moveable_Beams" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compartments">
+              <PropertyRef Name="Compartment_ID" />
+            </Principal>
+            <Dependent Role="Moveable_Beams">
+              <PropertyRef Name="Compartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Replacements_Compartments">
+          <End Role="Compartments" Type="Self.Compartment" Multiplicity="1" />
+          <End Role="Replacements" Type="Self.Replacement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compartments">
+              <PropertyRef Name="Compartment_ID" />
+            </Principal>
+            <Dependent Role="Replacements">
+              <PropertyRef Name="Compartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Filters_Departments">
+          <End Role="Departments" Type="Self.Department" Multiplicity="1" />
+          <End Role="Filters" Type="Self.Filter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Department_Code" />
+            </Principal>
+            <Dependent Role="Filters">
+              <PropertyRef Name="Department_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Filters_Manufacturers">
+          <End Role="Manufacturers" Type="Self.Manufacturer" Multiplicity="1" />
+          <End Role="Filters" Type="Self.Filter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturers">
+              <PropertyRef Name="Manufacturer_Code" />
+            </Principal>
+            <Dependent Role="Filters">
+              <PropertyRef Name="Manufacturer_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Valves_Maintenance_Filters">
+          <End Role="Filters" Type="Self.Filter" Multiplicity="1" />
+          <End Role="Valves_Maintenance" Type="Self.Valves_Maintenance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Filters">
+              <PropertyRef Name="Filter_Code" />
+            </Principal>
+            <Dependent Role="Valves_Maintenance">
+              <PropertyRef Name="Filter_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vibrators_Filters">
+          <End Role="Filters" Type="Self.Filter" Multiplicity="1" />
+          <End Role="Vibrators" Type="Self.Vibrator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Filters">
+              <PropertyRef Name="Filter_Code" />
+            </Principal>
+            <Dependent Role="Vibrators">
+              <PropertyRef Name="Filter_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Nozle_Spares_Nozle_Types">
+          <End Role="Nozle_Types" Type="Self.Nozle_Types" Multiplicity="1" />
+          <End Role="Nozle_Spares" Type="Self.Nozle_Spares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nozle_Types">
+              <PropertyRef Name="Nozle_ID" />
+            </Principal>
+            <Dependent Role="Nozle_Spares">
+              <PropertyRef Name="Nozle_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Replacements_Nozle_Spares">
+          <End Role="Nozle_Spares" Type="Self.Nozle_Spares" Multiplicity="1" />
+          <End Role="Replacements" Type="Self.Replacement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nozle_Spares">
+              <PropertyRef Name="Spare_ID" />
+            </Principal>
+            <Dependent Role="Replacements">
+              <PropertyRef Name="Spare_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Replacements_Nozle_Types">
+          <End Role="Nozle_Types" Type="Self.Nozle_Types" Multiplicity="1" />
+          <End Role="Replacements" Type="Self.Replacement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nozle_Types">
+              <PropertyRef Name="Nozle_ID" />
+            </Principal>
+            <Dependent Role="Replacements">
+              <PropertyRef Name="Nozle_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="database" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bag_Replacement" EntityType="Self.Bag_Replacement" />
+          <EntitySet Name="Bag_Suppliers" EntityType="Self.Bag_Suppliers" />
+          <EntitySet Name="Bag_Types" EntityType="Self.Bag_Types" />
+          <EntitySet Name="Cages_Maintenance" EntityType="Self.Cages_Maintenance" />
+          <EntitySet Name="Compartments" EntityType="Self.Compartment" />
+          <EntitySet Name="Departments" EntityType="Self.Department" />
+          <EntitySet Name="Fiber_Brand" EntityType="Self.Fiber_Brand" />
+          <EntitySet Name="Filters" EntityType="Self.Filter" />
+          <EntitySet Name="Manufacturers" EntityType="Self.Manufacturer" />
+          <EntitySet Name="Material_Types" EntityType="Self.Material_Types" />
+          <EntitySet Name="Moveable_Beams" EntityType="Self.Moveable_Beams" />
+          <EntitySet Name="Nozle_Spares" EntityType="Self.Nozle_Spares" />
+          <EntitySet Name="Nozle_Types" EntityType="Self.Nozle_Types" />
+          <EntitySet Name="Replacement_Reasons" EntityType="Self.Replacement_Reasons" />
+          <EntitySet Name="Replacements" EntityType="Self.Replacement" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Valves_Maintenance" EntityType="Self.Valves_Maintenance" />
+          <EntitySet Name="Vibrators" EntityType="Self.Vibrator" />
+          <AssociationSet Name="FK_Bag_Replacement_Bag_Types" Association="Self.FK_Bag_Replacement_Bag_Types">
+            <End Role="Bag_Types" EntitySet="Bag_Types" />
+            <End Role="Bag_Replacement" EntitySet="Bag_Replacement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bag_Replacement_Filters" Association="Self.FK_Bag_Replacement_Filters">
+            <End Role="Filters" EntitySet="Filters" />
+            <End Role="Bag_Replacement" EntitySet="Bag_Replacement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bag_Replacement_Replacement_Reasons" Association="Self.FK_Bag_Replacement_Replacement_Reasons">
+            <End Role="Replacement_Reasons" EntitySet="Replacement_Reasons" />
+            <End Role="Bag_Replacement" EntitySet="Bag_Replacement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bag_Types_Bag_Types" Association="Self.FK_Bag_Types_Bag_Types">
+            <End Role="Bag_Suppliers" EntitySet="Bag_Suppliers" />
+            <End Role="Bag_Types" EntitySet="Bag_Types" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bag_Types_Fiber_Brand" Association="Self.FK_Bag_Types_Fiber_Brand">
+            <End Role="Fiber_Brand" EntitySet="Fiber_Brand" />
+            <End Role="Bag_Types" EntitySet="Bag_Types" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bag_Types_Material_Types" Association="Self.FK_Bag_Types_Material_Types">
+            <End Role="Material_Types" EntitySet="Material_Types" />
+            <End Role="Bag_Types" EntitySet="Bag_Types" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Filters_Cage_maintenace" Association="Self.FK_Filters_Cage_maintenace">
+            <End Role="Filters" EntitySet="Filters" />
+            <End Role="Cages_Maintenance" EntitySet="Cages_Maintenance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Moveable_Beams_Compartments" Association="Self.FK_Moveable_Beams_Compartments">
+            <End Role="Compartments" EntitySet="Compartments" />
+            <End Role="Moveable_Beams" EntitySet="Moveable_Beams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Replacements_Compartments" Association="Self.FK_Replacements_Compartments">
+            <End Role="Compartments" EntitySet="Compartments" />
+            <End Role="Replacements" EntitySet="Replacements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Filters_Departments" Association="Self.FK_Filters_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Filters" EntitySet="Filters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Filters_Manufacturers" Association="Self.FK_Filters_Manufacturers">
+            <End Role="Manufacturers" EntitySet="Manufacturers" />
+            <End Role="Filters" EntitySet="Filters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Valves_Maintenance_Filters" Association="Self.FK_Valves_Maintenance_Filters">
+            <End Role="Filters" EntitySet="Filters" />
+            <End Role="Valves_Maintenance" EntitySet="Valves_Maintenance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vibrators_Filters" Association="Self.FK_Vibrators_Filters">
+            <End Role="Filters" EntitySet="Filters" />
+            <End Role="Vibrators" EntitySet="Vibrators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Nozle_Spares_Nozle_Types" Association="Self.FK_Nozle_Spares_Nozle_Types">
+            <End Role="Nozle_Types" EntitySet="Nozle_Types" />
+            <End Role="Nozle_Spares" EntitySet="Nozle_Spares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Replacements_Nozle_Spares" Association="Self.FK_Replacements_Nozle_Spares">
+            <End Role="Nozle_Spares" EntitySet="Nozle_Spares" />
+            <End Role="Replacements" EntitySet="Replacements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Replacements_Nozle_Types" Association="Self.FK_Replacements_Nozle_Types">
+            <End Role="Nozle_Types" EntitySet="Nozle_Types" />
+            <End Role="Replacements" EntitySet="Replacements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reasons_Cage_maintenace" Association="VassilikoFiltersModel.FK_Reasons_Cage_maintenace">
+            <End Role="Replacement_Reasons" EntitySet="Replacement_Reasons" />
+            <End Role="Cages_Maintenance" EntitySet="Cages_Maintenance" />
+          </AssociationSet>
+          <EntitySet Name="Colors" EntityType="VassilikoFiltersModel.Colors" />
+          <AssociationSet Name="FK_Bag_Suppliers_Colors" Association="VassilikoFiltersModel.FK_Bag_Suppliers_Colors">
+            <End Role="Color" EntitySet="Colors" />
+            <End Role="Bag_Suppliers" EntitySet="Bag_Suppliers" />
+          </AssociationSet>
+          <EntitySet Name="Nozle_Colors" EntityType="VassilikoFiltersModel.Nozle_Colors" />
+          <EntitySet Name="Nozle_Suppliers" EntityType="VassilikoFiltersModel.Nozle_Suppliers" />
+          <AssociationSet Name="FK_Nozle_Spares_Nozle_Suppliers" Association="VassilikoFiltersModel.FK_Nozle_Spares_Nozle_Suppliers">
+            <End Role="Nozle_Suppliers" EntitySet="Nozle_Suppliers" />
+            <End Role="Nozle_Spares" EntitySet="Nozle_Spares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Replacements_Reasons" Association="VassilikoFiltersModel.FK_Replacements_Reasons">
+            <End Role="Replacement_Reasons" EntitySet="Replacement_Reasons" />
+            <End Role="Replacement" EntitySet="Replacements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Nozle_Suppliers_Nozle_Colors" Association="VassilikoFiltersModel.FK_Nozle_Suppliers_Nozle_Colors">
+            <End Role="Nozle_Colors" EntitySet="Nozle_Colors" />
+            <End Role="Nozle_Suppliers" EntitySet="Nozle_Suppliers" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_Reasons_Cage_maintenace">
+          <End Type="VassilikoFiltersModel.Replacement_Reasons" Role="Replacement_Reasons" Multiplicity="1" />
+          <End Type="VassilikoFiltersModel.Cages_Maintenance" Role="Cages_Maintenance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Replacement_Reasons">
+              <PropertyRef Name="Replacement_Reason_Code" />
+            </Principal>
+            <Dependent Role="Cages_Maintenance">
+              <PropertyRef Name="Replacement_Reason_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Colors">
+          <Key>
+            <PropertyRef Name="Color" />
+          </Key>
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="Available" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Bag_Suppliers" Relationship="VassilikoFiltersModel.FK_Bag_Suppliers_Colors" FromRole="Color" ToRole="Bag_Suppliers" />
+        </EntityType>
+        <Association Name="FK_Bag_Suppliers_Colors">
+          <End Type="VassilikoFiltersModel.Colors" Role="Color" Multiplicity="1" />
+          <End Type="VassilikoFiltersModel.Bag_Suppliers" Role="Bag_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color">
+              <PropertyRef Name="Color" />
+            </Principal>
+            <Dependent Role="Bag_Suppliers">
+              <PropertyRef Name="Color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Nozle_Colors">
+          <Key>
+            <PropertyRef Name="Color" />
+          </Key>
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="Available" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Nozle_Suppliers" Relationship="VassilikoFiltersModel.FK_Nozle_Suppliers_Nozle_Colors" FromRole="Nozle_Colors" ToRole="Nozle_Suppliers" />
+        </EntityType>
+        <EntityType Name="Nozle_Suppliers">
+          <Key>
+            <PropertyRef Name="Supplier_ID" />
+          </Key>
+          <Property Name="Supplier_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Supplier" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Nozle_Spares" Relationship="VassilikoFiltersModel.FK_Nozle_Spares_Nozle_Suppliers" FromRole="Nozle_Suppliers" ToRole="Nozle_Spares" />
+          <NavigationProperty Name="Nozle_Colors" Relationship="VassilikoFiltersModel.FK_Nozle_Suppliers_Nozle_Colors" FromRole="Nozle_Suppliers" ToRole="Nozle_Colors" />
+        </EntityType>
+        <Association Name="FK_Nozle_Spares_Nozle_Suppliers">
+          <End Type="VassilikoFiltersModel.Nozle_Suppliers" Role="Nozle_Suppliers" Multiplicity="1" />
+          <End Type="VassilikoFiltersModel.Nozle_Spares" Role="Nozle_Spares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nozle_Suppliers">
+              <PropertyRef Name="Supplier_ID" />
+            </Principal>
+            <Dependent Role="Nozle_Spares">
+              <PropertyRef Name="Supplier_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Replacements_Reasons">
+          <End Type="VassilikoFiltersModel.Replacement_Reasons" Role="Replacement_Reasons" Multiplicity="1" />
+          <End Type="VassilikoFiltersModel.Replacement" Role="Replacement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Replacement_Reasons">
+              <PropertyRef Name="Replacement_Reason_Code" />
+            </Principal>
+            <Dependent Role="Replacement">
+              <PropertyRef Name="Replacement_Reason_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Nozle_Suppliers_Nozle_Colors">
+          <End Type="VassilikoFiltersModel.Nozle_Colors" Role="Nozle_Colors" Multiplicity="1" />
+          <End Type="VassilikoFiltersModel.Nozle_Suppliers" Role="Nozle_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nozle_Colors">
+              <PropertyRef Name="Color" />
+            </Principal>
+            <Dependent Role="Nozle_Suppliers">
+              <PropertyRef Name="Color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VassilikoFiltersModelStoreContainer" CdmEntityContainer="database">
+    <EntitySetMapping Name="Bag_Replacement">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Bag_Replacement)">
+        <MappingFragment StoreEntitySet="Bag_Replacement">
+          <ScalarProperty Name="Replacement_Code" ColumnName="Replacement_Code" />
+          <ScalarProperty Name="Repl_Date" ColumnName="Repl_Date" />
+          <ScalarProperty Name="Filter_Code" ColumnName="Filter_Code" />
+          <ScalarProperty Name="Sector_No" ColumnName="Sector_No" />
+          <ScalarProperty Name="Valve_No" ColumnName="Valve_No" />
+          <ScalarProperty Name="Bag_No" ColumnName="Bag_No" />
+          <ScalarProperty Name="Bag_Code" ColumnName="Bag_Code" />
+          <ScalarProperty Name="Replacement_Reason_Code" ColumnName="Replacement_Reason_Code" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bag_Suppliers">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Bag_Suppliers)">
+        <MappingFragment StoreEntitySet="Bag_Suppliers">
+          <ScalarProperty Name="Supplier_Code" ColumnName="Supplier_Code" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="Contact_Person" ColumnName="Contact_Person" />
+          <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+          <ScalarProperty Name="Telephone_Number" ColumnName="Telephone_Number" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bag_Types">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Bag_Types)">
+        <MappingFragment StoreEntitySet="Bag_Types">
+          <ScalarProperty Name="Bag_Code" ColumnName="Bag_Code" />
+          <ScalarProperty Name="Bag_Dimensions" ColumnName="Bag_Dimensions" />
+          <ScalarProperty Name="Bag_Description" ColumnName="Bag_Description" />
+          <ScalarProperty Name="Material_Code" ColumnName="Material_Code" />
+          <ScalarProperty Name="Supplier_Code" ColumnName="Supplier_Code" />
+          <ScalarProperty Name="Bag_Cost" ColumnName="Bag_Cost" />
+          <ScalarProperty Name="Fiber_Code" ColumnName="Fiber_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cages_Maintenance">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Cages_Maintenance)">
+        <MappingFragment StoreEntitySet="Cages_Maintenance">
+          <ScalarProperty Name="Cage_Code" ColumnName="Cage_Code" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Filter_Code" ColumnName="Filter_Code" />
+          <ScalarProperty Name="Replacement_Reason_Code" ColumnName="Replacement_Reason_Code" />
+          <ScalarProperty Name="Sector_No" ColumnName="Sector_No" />
+          <ScalarProperty Name="Valve_No" ColumnName="Valve_No" />
+          <ScalarProperty Name="Bag_No" ColumnName="Bag_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compartments">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Compartment)">
+        <MappingFragment StoreEntitySet="Compartments">
+          <ScalarProperty Name="Compartment_ID" ColumnName="Compartment_ID" />
+          <ScalarProperty Name="No_Of_Beams" ColumnName="No_Of_Beams" />
+          <ScalarProperty Name="No_Of_Nozles" ColumnName="No_Of_Nozles" />
+          <ScalarProperty Name="fans_No" ColumnName="fans_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Department)">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="Department_Code" ColumnName="Department_Code" />
+          <ScalarProperty Name="Department_Description" ColumnName="Department_Description" />
+          <ScalarProperty Name="No_Of_Filters" ColumnName="No_Of_Filters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fiber_Brand">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Fiber_Brand)">
+        <MappingFragment StoreEntitySet="Fiber_Brand">
+          <ScalarProperty Name="Fiber_Code" ColumnName="Fiber_Code" />
+          <ScalarProperty Name="Fiber_Supplier" ColumnName="Fiber_Supplier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filters">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Filter)">
+        <MappingFragment StoreEntitySet="Filters">
+          <ScalarProperty Name="Filter_Code" ColumnName="Filter_Code" />
+          <ScalarProperty Name="Filter_Description" ColumnName="Filter_Description" />
+          <ScalarProperty Name="Department_Code" ColumnName="Department_Code" />
+          <ScalarProperty Name="Manufacturer_Code" ColumnName="Manufacturer_Code" />
+          <ScalarProperty Name="No_Of_Sectors" ColumnName="No_Of_Sectors" />
+          <ScalarProperty Name="Sector_No_Valves" ColumnName="Sector_No_Valves" />
+          <ScalarProperty Name="Bags_Per_Valve" ColumnName="Bags_Per_Valve" />
+          <ScalarProperty Name="No_Of_Vibrators" ColumnName="No_Of_Vibrators" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Manufacturer)">
+        <MappingFragment StoreEntitySet="Manufacturers">
+          <ScalarProperty Name="Manufacturer_Code" ColumnName="Manufacturer_Code" />
+          <ScalarProperty Name="Manufacturer_Name" ColumnName="Manufacturer_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material_Types">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Material_Types)">
+        <MappingFragment StoreEntitySet="Material_Types">
+          <ScalarProperty Name="Material_Code" ColumnName="Material_Code" />
+          <ScalarProperty Name="Material_Description" ColumnName="Material_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moveable_Beams">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Moveable_Beams)">
+        <MappingFragment StoreEntitySet="Moveable_Beams">
+          <ScalarProperty Name="Compartment_ID" ColumnName="Compartment_ID" />
+          <ScalarProperty Name="Beam_no" ColumnName="Beam_no" />
+          <ScalarProperty Name="Moveable" ColumnName="Moveable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nozle_Spares">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Nozle_Spares)">
+        <MappingFragment StoreEntitySet="Nozle_Spares">
+          <ScalarProperty Name="Spare_ID" ColumnName="Spare_ID" />
+          <ScalarProperty Name="Nozle_ID" ColumnName="Nozle_ID" />
+          <ScalarProperty Name="Spare_Store_Id" ColumnName="Spare_Store_Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nozle_Types">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Nozle_Types)">
+        <MappingFragment StoreEntitySet="Nozle_Types">
+          <ScalarProperty Name="Nozle_ID" ColumnName="Nozle_ID" />
+          <ScalarProperty Name="Nozle_Type" ColumnName="Nozle_Type" />
+          <ScalarProperty Name="Nozle_Description" ColumnName="Nozle_Description" />
+          <ScalarProperty Name="Nozle_no_of_Spare_Parts" ColumnName="Nozle_no_of_Spare_Parts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Replacement_Reasons">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Replacement_Reasons)">
+        <MappingFragment StoreEntitySet="Replacement_Reasons">
+          <ScalarProperty Name="Replacement_Reason_Code" ColumnName="Replacement_Reason_Code" />
+          <ScalarProperty Name="Replacement_Description" ColumnName="Replacement_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Replacements">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Replacement)">
+        <MappingFragment StoreEntitySet="Replacements">
+          <ScalarProperty Name="Replacement_ID" ColumnName="Replacement_ID" />
+          <ScalarProperty Name="Beam_no" ColumnName="Beam_no" />
+          <ScalarProperty Name="Nozle_no" ColumnName="Nozle_no" />
+          <ScalarProperty Name="Spare_ID" ColumnName="Spare_ID" />
+          <ScalarProperty Name="Compartment_ID" ColumnName="Compartment_ID" />
+          <ScalarProperty Name="Nozle_ID" ColumnName="Nozle_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Replacement_Reason_Code" ColumnName="Replacement_Reason_Code" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.sysdiagram)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Valves_Maintenance">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Valves_Maintenance)">
+        <MappingFragment StoreEntitySet="Valves_Maintenance">
+          <ScalarProperty Name="Maintenance_Code" ColumnName="Maintenance_Code" />
+          <ScalarProperty Name="Maint_Date" ColumnName="Maint_Date" />
+          <ScalarProperty Name="Filter_Code" ColumnName="Filter_Code" />
+          <ScalarProperty Name="Sector_No" ColumnName="Sector_No" />
+          <ScalarProperty Name="Valve_No" ColumnName="Valve_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vibrators">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Vibrator)">
+        <MappingFragment StoreEntitySet="Vibrators">
+          <ScalarProperty Name="Vibrator_Code" ColumnName="Vibrator_Code" />
+          <ScalarProperty Name="Vibrator_Type" ColumnName="Vibrator_Type" />
+          <ScalarProperty Name="Filter_Code" ColumnName="Filter_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Colors)">
+        <MappingFragment StoreEntitySet="Colors">
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nozle_Colors">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Nozle_Colors)">
+        <MappingFragment StoreEntitySet="Nozle_Colors">
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nozle_Suppliers">
+      <EntityTypeMapping TypeName="IsTypeOf(VassilikoFiltersModel.Nozle_Suppliers)">
+        <MappingFragment StoreEntitySet="Nozle_Suppliers">
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

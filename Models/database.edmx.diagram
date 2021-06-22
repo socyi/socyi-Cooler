@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="52d57744da5d4a86b28268bf958c99db" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Bag_Replacement" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Bag_Suppliers" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Bag_Types" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Cages_Maintenance" Width="1.5" PointX="5.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Compartment" Width="1.5" PointX="10" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Department" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Fiber_Brand" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Filter" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Manufacturer" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Material_Types" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Moveable_Beams" Width="1.5" PointX="12.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Nozle_Spares" Width="1.5" PointX="10" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Nozle_Types" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Replacement_Reasons" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Replacement" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.sysdiagram" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Valves_Maintenance" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Vibrator" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Bag_Replacement_Bag_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Bag_Replacement_Filters" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Bag_Replacement_Replacement_Reasons" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Bag_Types_Bag_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Bag_Types_Fiber_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Bag_Types_Material_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Filters_Cage_maintenace" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Moveable_Beams_Compartments" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Replacements_Compartments" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Filters_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Filters_Manufacturers" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Valves_Maintenance_Filters" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Vibrators_Filters" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Nozle_Spares_Nozle_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Replacements_Nozle_Spares" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Replacements_Nozle_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Reasons_Cage_maintenace" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Colors" Width="1.5" PointX="0.75" PointY="18.625" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Bag_Suppliers_Colors" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Nozle_Colors" Width="1.5" PointX="10.125" PointY="10.875" />
+        <EntityTypeShape EntityType="VassilikoFiltersModel.Nozle_Suppliers" Width="1.5" PointX="12.875" PointY="17.625" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Nozle_Spares_Nozle_Suppliers" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Replacements_Reasons" />
+        <AssociationConnector Association="VassilikoFiltersModel.FK_Nozle_Suppliers_Nozle_Colors" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
